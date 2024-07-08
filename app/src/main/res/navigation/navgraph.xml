@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/pocetnaFragment">
+
+    <fragment
+        android:id="@+id/omiljeneBiljkeFragment"
+        android:name="com.example.spirala1.Fragments.OmiljeneBiljkeFragment"
+        android:label="OmiljeneBiljkeFragment" />
+    <fragment
+        android:id="@+id/pocetnaFragment"
+        android:name="com.example.spirala1.Fragments.PocetnaFragment"
+        android:label="PocetnaFragment" />
+    <fragment
+        android:id="@+id/novaBiljkaFragment"
+        android:name="com.example.spirala1.Fragments.NovaBiljkaFragment"
+        android:label="NovaBiljkaFragment" />
+</navigation>

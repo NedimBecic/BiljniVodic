@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF"
+        tools:context=".Activities.MainActivity">
+
+        <Spinner
+            android:id="@+id/modSpinner"
+            style="@style/spinner"
+            android:layout_width="180dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="15dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/biljkeRV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/spinner_item" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/biljkeRV"
+            android:layout_width="412dp"
+            android:layout_height="607dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modSpinner" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/mainGreen"
+            android:text="Reset"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/biljkeRV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/modSpinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pocetnaTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"
+            android:text="Biljni vodič"
+            android:textFontWeight="600"
+            app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--        <TextView-->
+<!--            android:id="@+id/dodatniFilter"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:text="Dodatni filter"-->
+<!--            android:textSize="22dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/biljkeRV" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/pretragaET"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:hint="Unesite text za pretragu"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/dodatniFilter" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/bojaSPIN"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/pretragaET" />-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/brzaPretraga"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:backgroundTint="@color/mainGreen"-->
+<!--            android:text="Brza pretraga"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/bojaSPIN" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

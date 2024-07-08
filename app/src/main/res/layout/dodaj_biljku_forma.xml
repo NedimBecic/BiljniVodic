@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dodajBiljkuTitle"
+        style="@style/titleText"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        android:text="Dodaj Biljku"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nazivET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Unesi naziv"
+            android:inputType="text"
+            app:boxStrokeColor="@color/mainGreen"
+            app:hintTextColor="@color/mainGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uslikajBiljkuBtn">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/porodicaET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Unesi porodicu"
+            android:inputType="text"
+            app:boxStrokeColor="@color/mainGreen"
+            app:hintTextColor="@color/mainGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nazivET">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/medicinskoUpozorenjeET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Unesi medicinisko upozorenje"
+            android:inputType="text"
+            app:boxStrokeColor="@color/mainGreen"
+            app:hintTextColor="@color/mainGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/porodicaET">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jeloET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Unesi jelo"
+            android:inputType="text"
+            app:boxStrokeColor="@color/mainGreen"
+            app:hintTextColor="@color/mainGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medicinskoUpozorenjeET">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ListView
+            android:id="@+id/medicinskaKoristLV"
+            android:layout_width="348dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/mainGreen"
+            android:dividerHeight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MedicinskeKoristiHeader"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ListView
+            android:id="@+id/klimatskiTipLV"
+            android:layout_width="348dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/mainGreen"
+            android:dividerHeight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/KlimatskiTipHeader"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <TextView
+            android:id="@+id/MedicinskeKoristiHeader"
+            style="@style/addBiljkaHeader"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="160dp"
+            android:text="@string/izaberi_medicinske_koristi"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dodajJeloBtn" />
+
+        <TextView
+            android:id="@+id/KlimatskiTipHeader"
+            style="@style/addBiljkaHeader"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="160dp"
+            android:text="@string/izaberi_klimatski_tip"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medicinskaKoristLV" />
+
+        <TextView
+            android:id="@+id/ZemljsniTipHeader"
+            style="@style/addBiljkaHeader"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="160dp"
+            android:text="@string/izaberi_zemljisni_tip"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/klimatskiTipLV" />
+
+        <ListView
+            android:id="@+id/zemljisniTipLV"
+            android:layout_width="348dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/mainGreen"
+            android:dividerHeight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ZemljsniTipHeader"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <TextView
+            android:id="@+id/ProfilOkusaHeader"
+            style="@style/addBiljkaHeader"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="160dp"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:text="@string/izaberi_profil_okusa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zemljisniTipLV" />
+
+        <ListView
+            android:id="@+id/profilOkusaLV"
+            android:layout_width="348dp"
+            android:layout_height="420dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:choiceMode="singleChoice"
+            android:divider="@color/mainGreen"
+            android:dividerHeight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProfilOkusaHeader"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <TextView
+            android:id="@+id/JelaHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="320dp"
+            android:text="Jela:"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jeloET" />
+
+        <ListView
+            android:id="@+id/jelaLV"
+            android:layout_width="348dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:divider="@color/mainGreen"
+            android:dividerHeight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/JelaHeader"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <Button
+            android:id="@+id/dodajJeloBtn"
+            android:layout_width="348dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/mainGreen"
+            android:text="Dodaj jelo"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jelaLV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/uslikajBiljkuBtn"
+            android:layout_width="348dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/mainGreen"
+            android:text="Uslikaj biljku"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slikaIV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/dodajBiljkuBtn"
+            android:layout_width="348dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/mainGreen"
+            android:text="Dodaj biljku"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilOkusaLV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/slikaIV"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dodajBiljkuTitle"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/placeholder" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
